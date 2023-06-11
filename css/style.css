@@ -1,0 +1,395 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    /* (CTA text) */
+    --light-red: hsl(356, 100%, 66%);
+    /* (CTA hover background) */
+    --vl-red: hsl(355, 100%, 74%);
+    /* (headings) */
+    --v-d-blue: hsl(208, 49%, 24%);
+    /* (footer text) */
+    --gray-blue: hsl(240, 2%, 79%);
+    /* (body copy) */
+    --vd-gray-blue: hsl(207, 13%, 34%);
+    /* (footer background) */
+    --vd-black-blue: hsl(240, 10%, 16%);
+    /* (gradient nav) */
+    --gradient-nav: linear-gradient(80deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    /* (gradient body) */
+    --gradient-body: linear-gradient(50deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+}
+
+* {
+    /* 300 | 600 */
+    font-family: 'Overpass', sans-serif;
+    /* 400 | 500 | 700 */
+    /*        font-family: 'Ubuntu', sans-serif;   */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+ul,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+section {
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--vd-black-blue)
+}
+
+/*-------- Start Header --------*/
+header {
+    background: linear-gradient(100deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    overflow: hidden;
+    border-radius: 0 0 0 120px;
+}
+
+@media(min-width: 777px) {
+    img.bg {
+        width: 130%;
+        top: -451px;
+        left: -270px;
+        animation: 40s infinite ease-in-out moving-rotate;
+        transform-origin: center
+    }
+
+    @keyframes moving-rotate {
+        0% {
+            left: -500px;
+            transform: rotate(0)
+        }
+
+        50% {
+            left: 600px;
+            transform: rotate(-180deg)
+        }
+
+        100% {
+            left: -500px;
+            transform: rotate(-360deg)
+        }
+    }
+}
+
+nav span {
+    cursor: pointer;
+    display: inline-block;
+}
+
+nav > ul > li {
+    position: relative;
+    color: var(--white)
+}
+
+nav > ul span:hover {
+    text-decoration: underline;
+}
+
+nav > ul .arrow {
+    transition: .5s;
+}
+
+nav > ul > li ul {
+    position: absolute;
+    background-color: var(--white);
+    color: hsl(208deg 54% 18% / 79%);
+    font-weight: 600;
+    border-radius: 5px;
+    transition: .5s;
+    max-height: 0px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+nav > ul > li ul.open {
+    max-height: 100vh;
+    margin-top: 1rem;
+}
+
+nav > ul li ul li {
+    margin-bottom: 5px;
+}
+
+nav > ul li ul li span {
+    transition: .3s;
+}
+
+nav > ul > li ul li span:hover {
+    text-decoration: none;
+    color: hsl(208deg 54% 18% / 99%);
+}
+
+@media(min-width: 777px) {
+    nav .btns span:first-child {
+        color: var(--white);
+    }
+}
+
+nav .btns span:last-child {
+    background: var(--white);
+    color: var(--vl-red);
+    padding: 10px 40px;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+nav .btns span:last-child:hover {
+    transform: translateY(-5px);
+}
+
+header .container > img {
+    cursor: pointer;
+}
+
+@media(max-width: 767px) {
+    header .bg {
+        width: 240%;
+        z-index: 0;
+        left: -290px;
+        bottom: -110%;
+        animation: 50s infinite ease-in-out moving-rotate;
+        transform-origin: center
+    }
+
+    @keyframes moving-rotate {
+        0% {
+            bottom: -110%;
+            transform: rotate(0)
+        }
+
+        50% {
+            bottom: 15%;
+            transform: rotate(-180deg)
+        }
+
+        100% {
+            bottom: -110%;
+            transform: rotate(-360deg)
+        }
+    }
+
+    header .container {
+        position: relative;
+    }
+
+    nav {
+        position: absolute;
+        background-color: var(--white);
+        width: 55%;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: .3s;
+        max-height: 0;
+        padding: 0 1.5rem !important;
+    }
+
+    nav.open {
+        max-height: 100vh;
+        padding: 1.5rem !important;
+    }
+
+    nav > ul {
+        position: relative;
+        width: 100%;
+    }
+
+    nav > ul span:hover {
+        text-decoration: none;
+    }
+
+    nav > ul::after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        background-color: var(--gray-blue);
+        width: 100%;
+        height: 1px;
+    }
+
+    nav > ul > li {
+        color: var(--v-d-blue);
+        width: 100%;
+        text-align: center;
+    }
+
+    nav > ul > li ul {
+        position: static;
+        background-color: hsl(207, 13%, 92%);
+        border-radius: 5px;
+        position: static;
+    }
+
+    nav li ul li {
+        color: hsl(208deg 49% 24% / 86%);
+        transition: .3s;
+    }
+
+    nav li ul li:hover {
+        color: var(--v-d-blue);
+    }
+
+    nav li ul li:not(:last-child) {
+        margin-bottom: 7px;
+    }
+
+    nav .btns span:last-child {
+        background: linear-gradient(80deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: var(--white);
+    }
+}
+
+/*-------- End Header --------*/
+/*-------- Start Landing --------*/
+.landing {
+    padding-top: 116px;
+    width: 100%;
+    position: relative;
+    height: 700px
+}
+
+.landing .bg {
+    position: absolute;
+    width: 800px;
+    z-index: -1;
+    left: ;
+}
+
+.landing span {
+    display: inline-block;
+    transition: .3s;
+    border-radius: 50px;
+    padding: 10px 18px;
+    cursor: pointer;
+    border: 1px solid var(--white);
+}
+
+.landing span:first-child {
+    background-color: var(--white);
+    color: var(--light-red);
+}
+
+.landing span:first-child:hover {
+    transform: translateY(-5px)
+}
+
+.landing span:last-child {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.landing span:last-child:hover {
+    transform: translateY(5px);
+}
+
+/*-------- End Landing --------*/
+/*-------- Start Future --------*/
+@media(min-width: 992px) {
+    .future img {
+        width: 620px;
+        transform: scale(1.1) translateX(190px);
+    }
+}
+
+@media(max-width: 992px) {
+    .future img {
+        width: 100%;
+    }
+}
+
+/*-------- End Future --------*/
+/*-------- Start State --------*/
+.state {
+    background-color: hsl(234deg 22% 34%);
+    border-radius: 0 100px;
+}
+
+.state .imgs {
+    width: 40%;
+    height: 288px;
+    margin-left: 60px;
+}
+
+.state img {
+    top: -31px;
+    width: 67%;
+}
+
+.state .text-content {
+    flex: 2;
+    max-width: 500px;
+}
+
+@media(max-width: 767px) {
+    .state .imgs {
+        height: 192px;
+        margin-left: 0;
+        margin-bottom: 50px
+    }
+
+    .state img {
+        width: 100%;
+    }
+}
+
+/*-------- End State --------*/
+/*-------- Start Laptop Section --------*/
+@media(max-width: 991px) {
+    .lap img {
+        width: 100%;
+    }
+}
+
+@media(min-width: 991px) {
+    .lap {
+        padding: 100px 0;
+    }
+
+    .lap .img {
+        left: -18%;
+    }
+
+    .lap .img img {
+        transform: scale(1.5);
+    }
+}
+
+/*-------- End Laptop Section --------*/
+/*-------- Start Footer --------*/
+footer {
+    background-color: var(--vd-black-blue);
+    border-radius: 0 100px 0 0;
+}
+
+footer h1 {
+    font-weight: 600;
+    font-size: 39px;
+}
+
+footer h5 {
+    color: #ffffffd6;
+}
+
+/*-------- End Footer --------*/

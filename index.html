@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | [Blogr]</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="position-relative w-100">
+        <img src="./images/bg-pattern-intro-mobile.svg" alt="" class="position-absolute bg">
+        <div class="container d-flex align-items-center justify-content-between pt-4 position-relative">
+            <h1 class="logo me-md-5"><a class="text-white fw-bold" href="#">Blogr</a></h1>
+            <nav class="d-flex flex-column flex-md-row align-items-center justify-content-md-between flex-md-fill px-4  py-md-4 py-0">
+                <ul class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3 mb-md-0">
+                    <li class="me-md-4 fw-bold" onclick="dropdown(this)">
+                        <span>Product<img class="arrow ms-1" src="./images/icon-arrow-light.svg" alt=""></span>
+                        <ul class="mt-md-3 px-md-4">
+                            <li class="pt-3"><span>Overview</span></li>
+                            <li><span>Pricing</span></li>
+                            <li><span>Marketplace</span></li>
+                            <li><span>Features</span></li>
+                            <li class="pb-3"><span>Integrations</span></li>
+                        </ul>
+                    </li>
+                    <li class="mt-4 mt-md-0 me-md-4 fw-bold" onclick="dropdown(this)">
+                        <span>Company<img class="arrow ms-1" src="./images/icon-arrow-light.svg" alt=""></span>
+                        <ul class="my-3 px-3">
+                            <li class="pt-3"><span>About</span></li>
+                            <li><span>Team</span></li>
+                            <li><span>Blog</span></li>
+                            <li class="pb-3"><span>Careers</span></li>
+                        </ul>
+                    </li>
+                    <li class="mb-md-0 me-md-4 fw-bold" onclick="dropdown(this)">
+                        <span>Connect<img class="arrow ms-1" src="./images/icon-arrow-light.svg" alt=""></span>
+                        <ul class="my-3 px-3">
+                            <li class="pt-3"><span>Contact</span></li>
+                            <li><span>Newsletter</span></li>
+                            <li class="pb-3"><span>LinkedIn</span></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="btns d-flex flex-column flex-md-row align-items-center">
+                    <span class="fw-bold">Login</span>
+                    <span class="fw-bold mt-3 mt-md-0 ms-md-3">Sign Up</span>
+                </div>
+            </nav>
+            <img src="" alt=""> <!-- For berger icon & close icon -->
+        </div>
+
+        <section class="landing">
+            <div class="container">
+                <div class="content text-center text-white">
+                    <h1 class="h1 fw-bold  text-white">A modern publishing platform</h1>
+                    <p>Grow your audience and build your online brand</p>
+                    <div class="btns pt-4">
+                        <span class="fw-bold me-4">Start For Free</span>
+                        <span class="fw-bold">Learn More</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="future py-5">
+            <div class="container">
+                <h1 class="text-center fw-bold">Designed for the future</h1>
+                <div class="content d-lg-flex align-items-center">
+                    <img src="./images/illustration-editor-desktop.svg" alt="" class="order-2 my-5 my-lg-0">
+                    <div class="text-center text-lg-start">
+                        <div>
+                            <h3 class="fw-bold mb-3">Introducing an extensible editor</h3>
+                            <p class="lh-lg">
+                                Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+                                The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+                                videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+                                change the looks of a blog.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold mb-3">Robust content management</h3>
+                            <p class="lh-lg">
+                                Flexible content management enables users to easily move through posts. Increase the usability of your blog
+                                by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="state d-flex flex-column flex-md-row align-items-center text-white px-4">
+            <div class="imgs position-relative">
+                <img src="./images/bg-pattern-circles.svg" class="position-absolute" alt="">
+                <img src="./images/illustration-phones.svg" class="position-absolute" alt="">
+            </div>
+            <div class="text-content text-center text-md-start">
+                <h1 class="fw-bold text-white">State of the Art Infrastructure</h1>
+                <p class="lh-lg">
+                    With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+                    This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+                </p>
+            </div>
+        </section>
+
+        <section class="lap text-center text-lg-start">
+            <div class="row align-items-center  mt-lg-5">
+                <div class="col-lg-5">
+                    <div class="img position-relative">
+                        <img src="./images/illustration-laptop-mobile.svg" class="w-100" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6">
+                    <div>
+                        <div class="px-5 px-lg-0">
+                            <h3 class="fw-bold my-4">Free, open, simple</h3>
+                            <p class="lh-lg px-5 ps-lg-0 pe-lg-5">
+                                Blogr is a free and open source application backed by a large community of helpful developers. It supports
+                                features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+                                and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+                            </p>
+                        </div>
+                        <div class="px-5 px-lg-0">
+                            <h3 class="fw-bold my-4">Powerful tooling</h3>
+                            <p class="lh-lg px-5 ps-lg-0 pe-lg-5">
+                                Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+                                capable of producing even the most complicated sites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pt-md-5 pb-md-5">
+        <div class="container text-center text-white">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h1 class="text-white text--md-start mb-5 m-md-0">Blogr</h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                    <h5 class="mb-4">Product</h5>
+                    <li><a class="text-white-50 mb-1" href="#">Overview</a></li>
+                    <li><a class="text-white-50 mb-1" href="#">Pricing</a></li>
+                    <li><a class="text-white-50 mb-1" href="#">Marketplace</a></li>
+                    <li><a class="text-white-50 mb-1" href="#">Features</a></li>
+                    <li><a class="text-white-50" href="#">Integrations</a></li>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                    <h5 class="mb-4">Company</h5>
+                    <li><a class="text-white-50 mb-1" href="#">About</a></li>
+                    <li><a class="text-white-50 mb-1" href="#">Team</a></li>
+                    <li><a class="text-white-50 mb-1" href="#">Blog</a></li>
+                    <li><a class="text-white-50" href="#">Careers</a></li>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                    <h5 class="mb-4">Connect</h5>
+                    <li><a class="text-white-50 mb-1" href="#">Contact</a></li>
+                    <li><a class="text-white-50 mb-1" href="#">Newsletter</a></li>
+                    <li><a class="text-white-50" href="#">LinkedIn</a></li>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body></html>
